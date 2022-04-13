@@ -32,4 +32,19 @@ class Vec3 {
       return x;
     }
   };
+
+
 }
+
+areaOfTriangle = (coordA, coordB , coordC) => {
+  const edgeA = Math.sqrt((coordB.x - coordC.x) ** 2 + (coordB.y - coordC.y) ** 2 + (coordB.z - coordC.z) ** 2);
+  const edgeB = Math.sqrt((coordA.x - coordC.x) ** 2 + (coordA.y - coordC.y) ** 2 + (coordA.z - coordC.z) ** 2);
+  const edgeC = Math.sqrt((coordB.x - coordA.x) ** 2 + (coordB.y - coordA.y) ** 2 + (coordB.z - coordA.z) ** 2);
+
+  const s = (edgeA + edgeB + edgeC) /2;
+
+  const area = Math.sqrt(s * (s - edgeA) * (s - edgeB) * (s - edgeC));
+
+  return area;
+}
+
