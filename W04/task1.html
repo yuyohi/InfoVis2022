@@ -6,6 +6,20 @@
   </head>
   <body>
     <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script></script>
+    <script>
+      const svg = d3.select("body").append("svg");
+      const draw = (data) => {
+        svg
+          .selectAll("circle")
+          .data(data)
+          .enter()
+          .append("circle")
+          .attr("cx", (d) => d.x)
+          .attr("cy", (d) => d.y)
+          .attr("r", (d) => d.r)
+          .style("fill", (d) => d.color);
+      };
+      d3.csv("https://yuyohi.github.io/InfoVis2022/W04/w04_task1.csv", draw);
+    </script>
   </body>
 </html>
