@@ -1,3 +1,3 @@
 # InfoVis2022
-For university classes
+For university classes.
 Contains the teacher's file.
