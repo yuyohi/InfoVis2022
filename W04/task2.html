@@ -7,7 +7,7 @@
   <body>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script>
-      const x_padding = 100;
+      const x_padding = 120;
       const padding = 10;
       const height = 20;
       const text_padding = padding + height / 2 + 5;
@@ -16,7 +16,7 @@
 
       const draw = (data) => {
         svg
-          .selectAll("rect")
+        .selectAll("rect")
           .data(data)
           .enter()
           .append("rect")
@@ -25,7 +25,7 @@
             return padding + i * (height + padding);
           })
           .attr("width", (d) => {
-            return d.new_cases;
+            return d.new_cases + 1;
           })
           .attr("height", height);
         svg
