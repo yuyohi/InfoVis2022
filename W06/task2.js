@@ -77,7 +77,7 @@ class ScatterPlot {
       .attr("font-weight", "middle")
       .text("x-label");
 
-      self.chart
+    self.chart
       .append("text")
       .attr("text-anchor", "middle")
       .attr("x", -self.inner_width / 2)
