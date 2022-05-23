@@ -107,16 +107,18 @@ class ScatterPlot {
   render() {
     let self = this;
 
-    self.chart
+    self.circles = self.chart
       .selectAll("circle")
       .data(self.data)
       .enter()
-      .append("circle")
+      .append("circle");
+
+    self.circles
       .attr("cx", (d) => self.xscale(d.x))
       .attr("cy", (d) => self.yscale(d.y))
       .attr("r", (d) => d.r);
 
-    self.chart
+    self.circles
       .on("mouseover", (e, d) => {
         d3.select("#tooltip")
           .style("opacity", 1)
