@@ -77,7 +77,7 @@ class Chart {
       .append("g")
       .attr(
         "transform",
-        `translate(${this.config.margin.left + 100}, ${
+        `translate(${this.config.margin.left + 60}, ${
           this.config.margin.top + this.map_inner_height - 180
         })`,
       );
